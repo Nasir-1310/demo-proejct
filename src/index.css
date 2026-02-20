@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus ring */
+*:focus {
+  outline: none;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Required field indicator */
+.required-field {
+  position: relative;
+}
+
+.required-field::after {
+  content: "*";
+  color: #ef4444;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Drag and drop styling */
+.dragging {
+  opacity: 0.5;
+}
+
+.drag-over {
+  border: 2px dashed #14b8a6;
+  background-color: #f0fdfa;
+}
+
+/* Ensure dropdowns are visible above containers */
+table {
+  overflow: visible;
+}
+
+table td {
+  position: relative;
+}
+
+/* Card overflow for dropdowns */
+.overflow-visible {
+  overflow: visible !important;
+}
+
+/* Table row dragging */
+tr[draggable="true"] {
+  cursor: grab;
+}
+
+tr[draggable="true"]:active {
+  cursor: grabbing;
+}
+
+/* Responsive tables */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 768px) {
+  .table-responsive table {
+    min-width: 700px;
+  }
+}
+
+/* Mobile spacing utilities */
+@media (max-width: 640px) {
+  .mobile-stack {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0.5rem;
+  }
+
+  .mobile-full {
+    width: 100%;
+  }
+
+  .mobile-text-sm {
+    font-size: 0.75rem;
+  }
+
+  .mobile-p-2 {
+    padding: 0.5rem;
+  }
+}
