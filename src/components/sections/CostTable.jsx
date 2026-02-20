@@ -118,7 +118,7 @@ const CostTable = ({
         {title}
       </h3>
 
-      <div className="table-responsive overflow-visible">
+      <div className="table-responsive">
         <table className="w-full min-w-[700px]">
           <thead>
             <tr className="bg-gray-50 border-b border-gray-200">

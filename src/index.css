@@ -95,15 +95,60 @@ tr[draggable="true"]:active {
   cursor: grabbing;
 }
 
-/* Responsive tables */
+/* Responsive tables with professional horizontal scroll */
 .table-responsive {
   overflow-x: auto;
+  overflow-y: visible;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #14b8a6 #e2e8f0;
+  position: relative;
+}
+
+.table-responsive::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: #e2e8f0;
+  border-radius: 4px;
+  margin: 0 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #14b8a6, #0d9488);
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #0d9488, #0f766e);
 }
 
 @media (max-width: 768px) {
+  .table-responsive {
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    padding-bottom: 0.5rem;
+  }
+
   .table-responsive table {
-    min-width: 700px;
+    min-width: 650px;
+  }
+
+  /* Scroll hint text for mobile */
+  .table-responsive::before {
+    /* content: "← Scroll →"; */
+    display: block;
+    text-align: center;
+    font-size: 0.65rem;
+    color: #94a3b8;
+    padding: 2px 0;
+    margin-bottom: 4px;
+    background: linear-gradient(90deg, #f0fdfa, #e0f2fe, #f0fdfa);
+    border-radius: 4px;
   }
 }
 

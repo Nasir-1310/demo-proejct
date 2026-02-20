@@ -30,7 +30,7 @@ const FabricCost = ({ data, onChange }) => {
         Fabric Cost
       </h3>
 
-      <div className="table-responsive overflow-visible">
+      <div className="table-responsive">
         <table className="w-full min-w-[600px]">
           <thead>
             <tr className="border-b border-gray-200">

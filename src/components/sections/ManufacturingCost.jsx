@@ -70,7 +70,7 @@ const ManufacturingCost = ({ data, onChange }) => {
         Cost of Manufacturing/DZ
       </h3>
 
-      <div className="table-responsive overflow-visible">
+      <div className="table-responsive">
         <table className="w-full min-w-[500px]">
           <thead>
             <tr className="bg-gray-50 border-b border-gray-200">
